@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Gayathri&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <div class="container2">
+        <header>
+            <div class="container-header">
+                <h1>Welcome To Inotel!</h1>
+                <p>View our hand-picked hotels from all over the world</p>
+                <br>
+                <p>
+                    <a class="mybtn" href="/campgrounds/new">Add New Hotel</a>
+                </p>
+            </div>
+        </header>
+
+        <div class="thumbnail-con" style="display:flex; flex-wrap: wrap;">
+            <% campgrounds.forEach(function(campground){ %>
+                <div>
+                    <div class="thumbnail2">
+                        <!-- <img src="<%= campground.image %>"> -->
+                        <div class="img" style="background-image:url(<%= campground.image %>)">
+                        </div>
+                        <div class="info-con">
+                            <div class="caption2">
+                                <h4>
+                                    <%= campground.name %>
+                                </h4>
+                            </div>
+                            <p class="mybtn2-bg-con">
+                                <a href="/campgrounds/<%= campground._id %>" class="mybtn2">More Info</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
+    </div>

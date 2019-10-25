@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+<link rel="stylesheet" href="/stylesheets/new_com.css">
+    <div class="con1">
+        <h1 class ="center">Edit Comment</h1>
+        <div class = "con2">
+            <form action="/campgrounds/<%= campground_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+                <div class="pad">
+                    <textarea class ="text" type="text" name="comment[text]"><%= comment.text %></textarea>
+                </div>
+
+                <div class="pad">
+                    <button class="but">Submit!</button>
+                </div>
+            </form>
+           <div class ="pad">
+                <a class = "back" href="/campgrounds">Go Back</a>
+           </div>
+        </div>
+    </div>
+
+<% include ../partials/footer %>

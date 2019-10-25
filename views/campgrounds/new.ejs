@@ -1,0 +1,15 @@
+<% include ../partials/header %>
+    <link rel="stylesheet" href="/stylesheets/new.css">
+    <div class="con">
+        <div style="width: 25%; margin: 25px auto;" class="form-con">
+            <form action="/campgrounds" method="POST">
+                <h1 style="text-align: center">Create a New Hotel</h1><br>
+                <input class="" type="text" name="name" placeholder="name"><br>
+                <input class="" type="text" name="image" placeholder="image url"><br>
+                <textarea name="description" placeholder="description"></textarea><br>
+                <button class="">Submit!</button>
+            </form>
+            <button class="back-btn"><a href="/campgrounds"> Go Back </a></button>
+        </div>
+    </div>
+    <% include ../partials/footer %>

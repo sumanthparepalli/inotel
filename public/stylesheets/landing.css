@@ -1,0 +1,107 @@
+body {
+  background-color: #000;
+}
+
+h1 {
+  font-size: 4em;
+  text-shadow: 2px 2px 10px black;
+}
+
+.mybtn {
+  color: #fff;
+  text-decoration: none;
+  background-color: #2334f1;
+  padding: 15px;
+  margin: 3px;
+  border: none;
+  border-radius: 10px;
+  text-shadow: none;
+  box-shadow: 2px 2px 10px black;
+  font-family: 'Gayathri', sans-serif;
+  /* font-size: 0.8em; */
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+}
+
+.slideshow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite;
+}
+
+.slideshow li:nth-child(1) {
+  background-image: url('https://www.berjayahotel.com/sites/default/files/colombo_2.jpg');
+}
+
+.slideshow li:nth-child(2) {
+  background-image: url('https://thewallpaper.co//wp-content/uploads/2016/08/high-resolution-images-desktop-images-iphone-city-images-landscape-panaromic-town-urban-images-1500x1000.jpg');
+  animation-delay: 10s;
+}
+
+.slideshow li:nth-child(3) {
+  background-image: url('https://www.fodors.com/wp-content/uploads/2018/12/HERO2_100Best_Amangiri_Swimming-Pool-Dusk_High-Res_3265.jpg');
+  animation-delay: 20s;
+}
+
+.slideshow li:nth-child(4) {
+  background-image: url(https://s.yimg.com/ny/api/res/1.2/4Hy1TXVjISLlTc1p4Yy5OQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyODA7aD03MjAuNjQ-/https://s.yimg.com/uu/api/res/1.2/BrkUk.PpksZpZBSd8PHh3A--~B/aD01NjM7dz0xMDAwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/robb_report_967/485b00415795c5760ce01c05a63dbc5e);
+  animation-delay: 30s;
+}
+
+.slideshow li:nth-child(5) {
+  background-image: url('https://www.telegraph.co.uk/content/dam/Travel/hotels/asia/maldives/gili-lankanfushi-maldives-p.jpg');
+  animation-delay: 40s;
+}
+
+@keyframes imageAnimation {
+  0% {
+      opacity: 0;
+      animation-timing-function: ease-in;
+  }
+  10% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+  }
+  20% {
+      opacity: 1;
+  }
+  30% {
+      opacity: 0;
+  }
+}
+
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+
+.no-cssanimations .slideshow li {
+  opacity: 1;
+}

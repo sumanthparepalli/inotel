@@ -1,0 +1,21 @@
+<% include ./partials/header %> 
+<link rel="stylesheet" href="stylesheets/account.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap" rel="stylesheet">
+    <div class="dash">
+        <%if(currentUser.gender=='male'){%>
+        <div class="prof-img" style="background-image: url(assets/male-avatar.png)"></div>
+        <%}else{%>
+        <div class="prof-img" style="background-image: url(assets/female-avatar.png)"></div>
+        <%}%>
+        <div class="head">Account Details</div>
+        <div>
+            <p>Personal Information:</p>
+            <span>Username: <%=currentUser.username%></span><br>
+            <span>First Name: <%=currentUser.firstname%></span><br>
+            <span>Last Name: <%=currentUser.lastname%></span><br>
+        </div>
+        <div>Posts Done:</div>
+        <%=posted%>
+    </div> 
+    <% console.log(currentUser)%>
+<% include ./partials/footer %> 

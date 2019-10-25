@@ -1,0 +1,72 @@
+<% include ../partials/header %>
+<link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+<link href="https://fonts.googleapis.com/css?family=IM+Fell+English:400i&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Gayathri&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stylesheets/show.css">
+<script defer src="https://friconix.com/cdn/friconix-0.749.js"></script>
+<div>
+    <div class="thumbnail2">
+        <img class="img" src="<%= campground.image %>">
+        <div class="caption">
+            <div class="container-h4">
+                <h4><a><%=campground.name%></a></h4>
+            </div>
+            <p><%= campground.description %></p>
+            <p class="submittedby">
+                <span>Submitted By <%= campground.author.username %></em>
+            </p>
+            <div class="controls">
+                <%if(currentUser){%>
+                <%if(stat==true && alhit==false){%>
+                <form action="/campgrounds/<%= campground._id %>/like" method="POST" class="">
+                    <button class="like-butt"><i class="fi-xwsuhl-thumb-solid no-like"></i></button><%=nlikes%>
+                </form>
+                <%} if(stat==true && alhit==true){%>
+                <form action="/campgrounds/<%= campground._id %>/unlike" method="POST" class="">
+                    <button class="like-butt"><i class="fi-xwsuhl-thumb-solid like"></i></button>&nbsp;<%=nlikes%>
+                </form>
+                <%}%>
+                <%}%>
+                <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
+                <a class="" href="/campgrounds/<%=campground._id%>/edit"><button class="edit">
+                    <i class="fi-xnsuxl-edit-solid"></i> Edit</button></a>
+                <form id="delete-form" action="/campgrounds/<%=campground._id%>?_method=DELETE" method="POST">
+                    <button class="delete"><i class="fi-xnsuxl-trash-bin"></i> Delete</button>
+                </form>
+            </div>
+            <% }%>
+        </div>
+    </div>
+    <div class="cmnts">
+        <div class="cmnts-padding">
+            <div class="text-right">
+                <a class="" href="/campgrounds/<%= campground._id %>/comments/new"><button class="edit edit2">Add New
+                        Comment</button></a>
+            </div>
+        </div>
+        <hr>
+        <% campground.comments.forEach(function(comment){ %>
+        <div class="comment">
+            <div class="">
+                <span class="author"><%= comment.author.username %></span>
+                <span class="timestammp">10 days ago</span>
+                <p class="comment-text">
+                    <%= comment.text %>
+                </p>
+                <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+                <a class="btn btn-xs btn-warning"
+                    href="/campgrounds/<%=campground._id %>/comments/<%=comment._id %>/edit">Edit</a>
+                <form id="delete-form"
+                    action="/campgrounds/<%=campground._id %>/comments/<%=comment._id %>?_method=DELETE" method="POST">
+                    <input type="submit" class="btn btn-xs btn-danger" value="Delete">
+                </form>
+                <% } %>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>
+
+<% include ../partials/footer %>

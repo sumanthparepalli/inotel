@@ -1,0 +1,155 @@
+body {
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    /* height: 100vh; */
+    margin: 0px;
+    padding: 0px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.img {
+    width: 100%;
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 10px #aaa;
+    border-radius: 5px;
+}
+
+.thumbnail2 {
+    /* background-color: rgb(108, 119, 112, 0.7); */
+    width: 45vw;
+    margin:auto;
+    /* margin-right: 0px; */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 5px black;
+}
+
+.container-h4 {
+    /* display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 50px; */
+    /* align-items: center; */
+    font-size: 20px;
+    color: #333;
+}
+
+.caption p {
+    text-align: justify;
+}
+
+.caption {
+    margin: 20px;
+}
+
+hr {
+    width: 100%;
+}
+
+.caption p:nth-of-type(1) {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #555;
+}
+
+
+.submittedby {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: right !important;
+    color: rgb(247, 143, 25);
+    font-size: 12px;
+}
+
+#delete-form {
+    display: inline;
+}
+
+.edit,
+.delete {
+    float: right;
+    width: 100px;
+    /* display: block; */
+    border: none;
+    color: white;
+    height: 30px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.delete {
+    background-color: #ff2222;
+}
+
+.edit {
+    background-color: #fc9804;
+}
+
+.cmnts {
+    margin:auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 5px black;
+    /* padding: 10px; */
+    width: 45vw;
+    padding-bottom: 10px;
+}
+
+.edit2 {
+    width: 150px;
+    background-color: #039e03;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    /* text-decoration: none; */
+}
+
+.timestammp {
+    float: right;
+}
+
+.timestammp,
+.author {
+    font-family: 'Gayathri', sans-serif;
+    font-size: 1.05em;
+}
+
+.comment {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    margin:10px;
+    margin-bottom: 5px;
+}
+
+.comment-text {
+    border-top: 1px solid black;
+    padding-top: 5px;
+    padding-left: 5px;
+    margin-top: 5px;
+}
+
+.cmnts-padding {
+    padding: 20px;
+}
+
+nav{
+    width: 100%;
+}
+
+.like-butt
+{
+    float: left;
+}
+
+form{
+    display: inline;
+}

@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+<link rel="stylesheet" href="/stylesheets/new_com.css">
+    <div class="con1">
+        <h1 class = "center">Add New Comment to <%= campground.name %></h1>
+        <div class = "con2">
+            <form action="/campgrounds/<%= campground._id %>/comments" method="POST">
+                
+               <div class ="pad">
+                    <textarea class="text" type="text" name="comment[text]" placeholder="Write your comment here.."></textarea>
+               </div>
+               <div class="pad">
+                    <button class="but">Submit!</button>
+               </div>
+               
+              </form>
+           <div class = "pad">
+                <a class ="back"  href="/campgrounds">Go Back</a>
+           </div>
+        </div>
+    </div>
+
+<% include ../partials/footer %>
