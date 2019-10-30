@@ -6,7 +6,7 @@ body
 .dash
 {
     width:800px;
-    height:800px;
+    /* height:800px; */
     margin: 150px auto;
     background-color: white;
     padding-bottom: 20px;
@@ -56,7 +56,7 @@ legend{
     width:30%;
     font-weight: bolder;
     text-transform: capitalize;
-    color: #666;
+    color: #5f6368;
     text-shadow: 0px 0px 1px 1px gray;
 }
 
@@ -77,4 +77,10 @@ hr{
     border: 1px solid #999;
 }
 
-
+.post{
+    margin-top: 20px;
+    box-shadow: 1px 1px 4px 1px gray;
+    padding: 20px;
+    line-height: 2em;
+    font-size: 1.4em;
+}
