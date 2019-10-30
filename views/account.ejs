@@ -1,21 +1,28 @@
 <% include ./partials/header %> 
 <link rel="stylesheet" href="stylesheets/account.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap" rel="stylesheet">
-    <div class="dash">
-        <%if(currentUser.gender=='male'){%>
-        <div class="prof-img" style="background-image: url(assets/male-avatar.png)"></div>
-        <%}else{%>
-        <div class="prof-img" style="background-image: url(assets/female-avatar.png)"></div>
-        <%}%>
+<link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet">
+<div class="dash">
+    <fieldset>
+        <legend>
+            <%if(currentUser.gender=='male'){%>
+            <div class="prof-img" style="background-image: url(assets/male-avatar.png);border: 1px solid black;"></div>
+            <%}else{%>
+                <div class="prof-img" style="background-image: url(assets/female-avatar.png);border-radius: 50%;"></div>
+            <%}%>
+        </legend>
         <div class="head">Account Details</div>
-        <div>
+        <div class="info">
             <p>Personal Information:</p>
-            <span>Username: <%=currentUser.username%></span><br>
-            <span>First Name: <%=currentUser.firstname%></span><br>
-            <span>Last Name: <%=currentUser.lastname%></span><br>
+            <hr><span class="info_sub">Username: </span><span class="info_cont"><%=currentUser.username%></span><br>
+            <hr><span class="info_sub">First Name: </span><span class="info_cont"><%=currentUser.firstname%></span><br>
+            <hr><span class="info_sub">Last Name: </span><span class="info_cont"><%=currentUser.lastname%></span><br>
         </div>
         <div>Posts Done:</div>
-        <%=posted%>
-    </div> 
-    <% console.log(currentUser)%>
+        <%for(var i=0;i<posted.length ;i++ ) { %>
+        <%=posted[i].name%><br>
+        <%}%>
+    </fieldset>
+</div>
+<% console.log(currentUser)%>
 <% include ./partials/footer %> 

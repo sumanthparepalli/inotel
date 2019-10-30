@@ -20,7 +20,7 @@ body {
 .mybtn, .mybtn2:visited {
     color: #fff;
     text-decoration: none;
-    background-color: #2334f1;
+    background-color: rgba(108, 119, 112, 0.7);
     padding: 15px;
     margin: 3px;
     border: none;
@@ -144,7 +144,7 @@ body {
 }
 
 .mybtn2-bg-con {
-    background-color: #2334f1;
+    background-color: rgba(108, 119, 112, 0.7);
     /* padding: 15px; */
     border: none;
     border-radius: 0px 0px 10px 10px;
