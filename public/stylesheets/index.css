@@ -98,6 +98,7 @@ body {
     height: 300px;
     background-size: cover;
     border-radius: 10px 10px 0px 0px;
+    background-position: center;
     /* background-color: #888; */
     float: left;
     /* margin: 20px; */
